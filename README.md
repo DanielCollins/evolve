@@ -51,7 +51,7 @@ You will see something like this:
     with error: 2.001225881991e+16
 
 It is printing, after every evolution time step, the best program that evolved
-so far, and, the (user defineable) error level of that program.
+so far, and, the (user definable) error level of that program.
 
 ### Defining the problem to train on
 
@@ -77,4 +77,4 @@ Both of those problems could be somewhat mitigated with more work.
 
 One thing it is decent at currently is quickly finding the general shape or
 "order" of polynomial or exponential expressions, but it struggles with the
-apperently much easier problem of finding an exact constant expression.
+apparently much easier problem of finding an exact constant expression.
