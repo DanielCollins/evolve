@@ -52,3 +52,29 @@ You will see something like this:
 
 It is printing, after every evolution time step, the best program that evolved
 so far, and, the (user defineable) error level of that program.
+
+### Defining the problem to train on
+
+To feed the machine test data, you have to edit the definition of procedure
+`rerror`. It receives a sample program as an argument. It can invoke the
+sample on arguments using `(run-specimen sample '(x y) a b)` where a and b
+are two input arguments. Compare the result with the correct output, and return
+any kind of error or value, which the machine will try to minimise.
+
+
+### Is it any good?
+
+No.
+
+It's a good example of how easy lisp makes symbolic program, and it's also very
+fun to watch it working, but it is not a particularly practical machine
+learning system.
+
+Genetic programming systems in general no longer seem to be popular, (perhaps
+for good reason?), and mine in particular suffers firstly from a weak
+(non-turing-complete) program language, and secondly from slow inference.
+Both of those problems could be somewhat mitigated with more work.
+
+One thing it is decent at currently is quickly finding the general shape or
+"order" of polynomial or exponential expressions, but it struggles with the
+apperently much easier problem of finding an exact constant expression.
